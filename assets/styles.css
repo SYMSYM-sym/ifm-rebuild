@@ -826,3 +826,30 @@ em { font-style: italic; color: var(--accent-soft); }
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- Phone image (anti-scrape) ---------- */
+.phone-img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+.phone-img--sm { height: 18px; }
+.phone-img--md { height: 28px; }
+.phone-img--accent { height: 26px; }
+
+.js-tel {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity .2s var(--ease);
+}
+.js-tel:hover { opacity: 0.8; }
+.js-tel .phone-img { transition: opacity .2s var(--ease); }
+
+/* When the phone image sits inside an accent button, swap variants via CSS */
+.btn.js-tel .phone-img { display: none; }
+
+/* Hover underline for inline tel links */
+a.js-tel:hover { color: var(--accent); }

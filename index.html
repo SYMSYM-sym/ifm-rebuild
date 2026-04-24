@@ -27,8 +27,6 @@
   "@type": "HealthAndBeautyBusiness",
   "name": "Igor For Men",
   "image": "https://igorformen.com/og.jpg",
-  "telephone": "+1-310-652-4467",
-  "email": "info@igorformen.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "801 Larrabee St, Suite 5",
@@ -57,9 +55,9 @@
   <div class="topbar__inner">
     <span class="topbar__item"><span class="dot"></span> By appointment only</span>
     <span class="topbar__spacer"></span>
-    <a class="topbar__item" href="tel:+13106524467">(310) 652-4467</a>
-    <span class="topbar__divider" aria-hidden="true">|</span>
-    <a class="topbar__item" href="mailto:info@igorformen.com">info@igorformen.com</a>
+    <a class="topbar__item js-tel" data-tel="1" aria-label="Call Igor For Men">
+      <img src="assets/img/phone-sm.png" alt="" class="phone-img phone-img--sm" decoding="async" loading="lazy" />
+    </a>
   </div>
 </div>
 
@@ -77,7 +75,7 @@
       <a href="#faq">FAQ</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a class="btn btn--accent nav__cta" href="tel:+13106524467">Book Now</a>
+    <a class="btn btn--accent nav__cta js-tel" data-tel="1">Book Now</a>
     <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -88,7 +86,7 @@
     <a href="#aftercare">Aftercare</a>
     <a href="#faq">FAQ</a>
     <a href="#visit">Visit</a>
-    <a class="btn btn--accent" href="tel:+13106524467">Book Now — (310) 652-4467</a>
+    <a class="btn btn--accent js-tel" data-tel="1">Call to Book</a>
   </div>
 </header>
 
@@ -110,7 +108,7 @@
       your comfort, and the kind of results that make you forget you had to schedule them.
     </p>
     <div class="hero__cta">
-      <a class="btn btn--accent btn--lg" href="tel:+13106524467">Call to Book</a>
+      <a class="btn btn--accent btn--lg js-tel" data-tel="1">Call to Book</a>
       <a class="btn btn--ghost btn--lg" href="#services">View Services</a>
     </div>
     <div class="hero__meta">
@@ -160,7 +158,9 @@
         </div>
         <div>
           <p class="eyebrow eyebrow--light">Call</p>
-          <p><a href="tel:+13106524467">(310) 652-4467</a></p>
+          <a class="js-tel" data-tel="1" aria-label="Call Igor For Men">
+            <img src="assets/img/phone-md.png" alt="" class="phone-img phone-img--md" decoding="async" loading="lazy" />
+          </a>
         </div>
       </div>
       <a class="btn btn--accent btn--block" href="https://www.google.com/maps/search/?api=1&query=801+Larrabee+St+Suite+5+West+Hollywood+CA+90069" target="_blank" rel="noopener">Get Directions</a>
@@ -249,7 +249,7 @@
     </div>
 
     <div class="services__footer">
-      <p>Need something not listed, or pricing for a combo? <a href="tel:+13106524467">Call (310) 652-4467</a> — we'll take care of you.</p>
+      <p>Need something not listed, or pricing for a combo? <a class="js-tel" data-tel="1">Give us a call</a> — we'll take care of you.</p>
     </div>
   </div>
 </section>
@@ -283,7 +283,7 @@
       <div class="care__col">
         <h3 class="h3 care__title">Stay on schedule</h3>
         <p>We recommend rebooking every <strong>4 to 6 weeks</strong>. The more consistent you are, the finer the regrowth — and the easier every future appointment becomes.</p>
-        <a class="btn btn--accent btn--block" href="tel:+13106524467">Book Your Next Visit</a>
+        <a class="btn btn--accent btn--block js-tel" data-tel="1">Book Your Next Visit</a>
       </div>
     </div>
   </div>
@@ -360,7 +360,7 @@
     </div>
 
     <div class="faq__more">
-      <p>Still unsure? <a href="tel:+13106524467">Call (310) 652-4467</a> and ask.</p>
+      <p>Still unsure? <a class="js-tel" data-tel="1">Give us a call</a> and ask.</p>
     </div>
   </div>
 </section>
@@ -384,15 +384,14 @@
         </div>
         <div class="visit__row">
           <p class="eyebrow eyebrow--light">Contact</p>
-          <p>
-            <a href="tel:+13106524467">(310) 652-4467</a><br/>
-            <a href="mailto:info@igorformen.com">info@igorformen.com</a>
-          </p>
+          <a class="js-tel" data-tel="1" aria-label="Call Igor For Men">
+            <img src="assets/img/phone-md.png" alt="" class="phone-img phone-img--md" decoding="async" loading="lazy" />
+          </a>
         </div>
       </div>
 
       <div class="visit__cta">
-        <a class="btn btn--accent btn--lg" href="tel:+13106524467">Call to Book</a>
+        <a class="btn btn--accent btn--lg js-tel" data-tel="1">Call to Book</a>
         <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/search/?api=1&query=801+Larrabee+St+Suite+5+West+Hollywood+CA+90069" target="_blank" rel="noopener">Get Directions</a>
       </div>
     </div>
@@ -452,7 +451,9 @@
       </div>
       <div>
         <p class="eyebrow eyebrow--light">Contact</p>
-        <p><a href="tel:+13106524467">(310) 652-4467</a><br/><a href="mailto:info@igorformen.com">info@igorformen.com</a></p>
+        <a class="js-tel" data-tel="1" aria-label="Call Igor For Men">
+          <img src="assets/img/phone-md.png" alt="" class="phone-img phone-img--md" decoding="async" loading="lazy" />
+        </a>
       </div>
     </div>
   </div>
@@ -466,11 +467,4 @@
 </body>
 </html>
 er__base">
-    <p>© <span id="year"></span> Igor For Men · All rights reserved.</p>
-    <p class="footer__meta">By appointment only.</p>
-  </div>
-</footer>
-
-<script src="assets/script.js"></script>
-</body>
-</html>
+    <p>© <span id="year"></span> Igor For Men · All righ

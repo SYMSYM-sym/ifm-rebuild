@@ -252,6 +252,7 @@ async function renderBlogIndex(all, partials) {
     NAV: partials.navJournal,
     FILTER_BUTTONS: filterHtml || '',
     ARTICLE_CARDS: cards,
+    EMPTY_STATE_HTML: all.length === 0 ? '<div class="blog-empty-state"><p><strong>The Journal is just getting started.</strong></p><p>New notes on men\'s grooming publish every Monday and Thursday.</p></div>' : '',
     FOOTER: partials.footer,
   });
 

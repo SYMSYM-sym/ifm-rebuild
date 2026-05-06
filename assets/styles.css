@@ -1017,3 +1017,17 @@ a.js-tel:hover { color: var(--accent); }
   .article-body { padding-left: 0; padding-right: 0; }
   .blog-filter__btn { min-height: 44px; }
 }
+
+/* Ensure HTML5 hidden attribute always wins over .btn display rules */
+[hidden] { display: none !important; }
+
+/* Empty state for journal page */
+.blog-empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--ink-dim);
+  font-family: var(--f-serif);
+  font-size: 1.1rem;
+}
+.blog-empty-state p { margin: 0 0 12px; }
+.blog-empty-state strong { color: var(--accent); font-weight: 500; }

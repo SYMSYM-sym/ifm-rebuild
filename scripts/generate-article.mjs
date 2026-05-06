@@ -81,7 +81,7 @@ West Hollywood, WeHo, Larrabee Street, Sunset Strip, Pacific Design Center, The 
 ${recentBlock}
 
 # Output rules
-- Word count: 900–1400.
+- Word count: 1000–1400 in the main body sections (everything between the first paragraph and the FAQ — DO NOT include the FAQ in your word count target).
 - One H1 (the article title — exactly the title field below).
 - 3–5 H2 sections. H3 sparingly.
 - Open with a 40–60 word "answer paragraph" that directly answers the article's keyword query. No preamble.

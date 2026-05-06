@@ -1,0 +1,49 @@
+services:
+  brazilian:
+    href: "/#services"
+    variants:
+      - "male Brazilian wax"
+      - "Brazilian service"
+      - "intimate waxing"
+  back:
+    href: "/#services"
+    variants:
+      - "back waxing"
+      - "back wax service"
+      - "full back wax"
+  back_end:
+    href: "/#services"
+    variants:
+      - "back-end waxing"
+      - "targeted back-area service"
+  chest:
+    href: "/#services"
+    variants:
+      - "chest and abdomen waxing"
+      - "chest wax"
+  arms:
+    href: "/#services"
+    variants:
+      - "arm waxing"
+      - "full-arm hair removal"
+  legs:
+    href: "/#services"
+    variants:
+      - "leg waxing"
+      - "full leg wax"
+  eyebrows:
+    href: "/#services"
+    variants:
+      - "eyebrow shaping"
+      - "men's brow wax"
+  trimming:
+    href: "/#services"
+    variants:
+      - "full-body trimming"
+      - "trimming service"
+
+pages:
+  about: { href: "/#about", variants: ["about IFM", "our salon", "private West Hollywood salon"] }
+  faq: { href: "/#faq", variants: ["common questions", "frequently asked questions"] }
+  aftercare: { href: "/#aftercare", variants: ["aftercare guide", "post-wax care"] }
+  visit: { href: "/#visit", variants: ["our location", "directions and hours", "visit IFM"] }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{{HEAD}}
+<body class="blog-page">
+{{TOPBAR}}
+{{NAV}}
+<main>
+  <article class="article-shell" itemscope itemtype="https://schema.org/Article">
+    <header class="article-hero">
+      <div class="article-hero__inner container">
+        <p class="eyebrow article-hero__eyebrow">{{BUCKET_EYEBROW}}</p>
+        <h1 class="article-hero__title" itemprop="headline">{{TITLE}}</h1>
+        <div class="article-hero__meta">
+          <span class="article-pill">{{READING_TIME}} min read</span>
+          <span class="article-byline muted">The IFM Team</span>
+        </div>
+        <p class="article-review muted">{{REVIEW_STAMP}}</p>
+      </div>
+    </header>
+    <div class="article-body container" itemprop="articleBody">
+      {{BODY_HTML}}
+    </div>
+    {{FAQ_HTML}}
+    {{RELATED_HTML}}
+  </article>
+</main>
+{{FOOTER}}
+<script src="/assets/script.js"></script>
+</body>
+</html>

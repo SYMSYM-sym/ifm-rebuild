@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+{{HEAD}}
+<body class="blog-page blog-index-page">
+{{TOPBAR}}
+{{NAV}}
+<main>
+  <section class="section blog-index-hero">
+    <div class="container">
+      <p class="eyebrow">Journal</p>
+      <h1 class="h2">Notes on men's grooming</h1>
+      <p class="section__sub">Written from a private salon in West Hollywood.</p>
+      <div class="blog-filter" role="group" aria-label="Filter by topic">
+        <button type="button" class="blog-filter__btn blog-filter__btn--all is-active" data-bucket="">All</button>
+        {{FILTER_BUTTONS}}
+      </div>
+    </div>
+  </section>
+  <section class="section section--dark">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid">
+        {{ARTICLE_CARDS}}
+      </div>
+      <div class="blog-load-more-wrap">
+        <button type="button" class="btn btn--ghost blog-load-more" id="blogLoadMore" hidden>Load more</button>
+      </div>
+    </div>
+  </section>
+</main>
+{{FOOTER}}
+<script>
+(function () {
+  var LOAD = 12;
+  var grid = document.getElementById('blogGrid');
+  var btn = document.getElementById('blogLoadMore');
+  if (!grid || !btn) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.blog-card'));
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.blog-filter__btn'));
+  var visibleCap = LOAD;
+  var activeBucket = '';
+
+  function setActiveFilter(b) {
+    activeBucket = b;
+    filterBtns.forEach(function (el) {
+      var isAll = el.classList.contains('blog-filter__btn--all');
+      var match = isAll ? b === '' : el.getAttribute('data-bucket') === b;
+      el.classList.toggle('is-active', match);
+    });
+    visibleCap = LOAD;
+    layout();
+  }
+
+  function layout() {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var bucket = card.getAttribute('data-bucket') || '';
+      var match = activeBucket === '' || bucket === activeBucket;
+      if (!match) {
+        card.hidden = true;
+        return;
+      }
+      shown++;
+      card.hidden = shown > visibleCap;
+    });
+    var totalMatch = cards.filter(function (c) {
+      var bucket = c.getAttribute('data-bucket') || '';
+      return activeBucket === '' || bucket === activeBucket;
+    }).length;
+    btn.hidden = totalMatch <= visibleCap;
+  }
+
+  filterBtns.forEach(function (el) {
+    el.addEventListener('click', function () {
+      var b = el.getAttribute('data-bucket') || '';
+      setActiveFilter(b);
+    });
+  });
+
+  btn.addEventListener('click', function () {
+    visibleCap += LOAD;
+    layout();
+  });
+
+  layout();
+})();
+</script>
+<script src="/assets/script.js"></script>
+</body>
+</html>

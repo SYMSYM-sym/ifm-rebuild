@@ -1,1 +1,172 @@
-<!-- Will be regenerated on first article publish. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Notes on men's grooming, written from a private salon in West Hollywood." />
+<meta name="theme-color" content="#0b0b0d" />
+<title>Journal — Igor For Men</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+
+<link rel="canonical" href="https://igorformen.com/blog/" />
+<meta property="og:title" content="Journal — Igor For Men" />
+<meta property="og:description" content="Notes on men's grooming, written from a private salon in West Hollywood." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://igorformen.com/blog/" />
+</head>
+
+<body class="blog-page blog-index-page">
+<div class="topbar" aria-label="Contact information">
+  <div class="topbar__inner">
+    <span class="topbar__item"><span class="dot"></span> By appointment only</span>
+    <span class="topbar__spacer"></span>
+    <a class="topbar__item js-tel" data-tel="1" aria-label="Call Igor For Men">
+      <img src="/assets/img/phone-sm.png" alt="" class="phone-img phone-img--sm" decoding="async" loading="lazy" />
+    </a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/#home" class="nav__brand" aria-label="Igor For Men — Home">
+      <span class="nav__mark">IFM</span>
+      <span class="nav__name">Igor For Men</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary navigation">
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/" class="nav__link--active" aria-current="page">Journal</a>
+      <a href="/#aftercare">Aftercare</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#visit">Visit</a>
+    </nav>
+    <a class="btn btn--accent nav__cta js-tel" data-tel="1">Book Now</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="/#about">About</a>
+    <a href="/#services">Services</a>
+    <a href="/blog/" class="nav__link--active" aria-current="page">Journal</a>
+    <a href="/#aftercare">Aftercare</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#visit">Visit</a>
+    <a class="btn btn--accent js-tel" data-tel="1">Call to Book</a>
+  </div>
+</header>
+
+<main>
+  <section class="section blog-index-hero">
+    <div class="container">
+      <p class="eyebrow">Journal</p>
+      <h1 class="h2">Notes on men's grooming</h1>
+      <p class="section__sub">Written from a private salon in West Hollywood.</p>
+      <div class="blog-filter" role="group" aria-label="Filter by topic">
+        <button type="button" class="blog-filter__btn blog-filter__btn--all is-active" data-bucket="">All</button>
+        
+      </div>
+    </div>
+  </section>
+  <section class="section section--dark">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid">
+        
+      </div>
+      <div class="blog-load-more-wrap">
+        <button type="button" class="btn btn--ghost blog-load-more" id="blogLoadMore" hidden>Load more</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="nav__mark">IFM</span>
+      <p>Exclusive grooming for men. West Hollywood.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <p class="eyebrow eyebrow--light">Visit</p>
+        <p>801 Larrabee St, Suite 5<br/>West Hollywood, CA 90069</p>
+      </div>
+      <div>
+        <p class="eyebrow eyebrow--light">Hours</p>
+        <p>Tue – Sat · 8 AM – 6 PM</p>
+      </div>
+      <div>
+        <p class="eyebrow eyebrow--light">Contact</p>
+        <a class="js-tel" data-tel="1" aria-label="Call Igor For Men">
+          <img src="/assets/img/phone-md.png" alt="" class="phone-img phone-img--md" decoding="async" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__base">
+    <p>© <span id="year"></span> Igor For Men · All rights reserved.</p>
+    <p class="footer__meta">By appointment only.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var LOAD = 12;
+  var grid = document.getElementById('blogGrid');
+  var btn = document.getElementById('blogLoadMore');
+  if (!grid || !btn) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.blog-card'));
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.blog-filter__btn'));
+  var visibleCap = LOAD;
+  var activeBucket = '';
+
+  function setActiveFilter(b) {
+    activeBucket = b;
+    filterBtns.forEach(function (el) {
+      var isAll = el.classList.contains('blog-filter__btn--all');
+      var match = isAll ? b === '' : el.getAttribute('data-bucket') === b;
+      el.classList.toggle('is-active', match);
+    });
+    visibleCap = LOAD;
+    layout();
+  }
+
+  function layout() {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var bucket = card.getAttribute('data-bucket') || '';
+      var match = activeBucket === '' || bucket === activeBucket;
+      if (!match) {
+        card.hidden = true;
+        return;
+      }
+      shown++;
+      card.hidden = shown > visibleCap;
+    });
+    var totalMatch = cards.filter(function (c) {
+      var bucket = c.getAttribute('data-bucket') || '';
+      return activeBucket === '' || bucket === activeBucket;
+    }).length;
+    btn.hidden = totalMatch <= visibleCap;
+  }
+
+  filterBtns.forEach(function (el) {
+    el.addEventListener('click', function () {
+      var b = el.getAttribute('data-bucket') || '';
+      setActiveFilter(b);
+    });
+  });
+
+  btn.addEventListener('click', function () {
+    visibleCap += LOAD;
+    layout();
+  });
+
+  layout();
+})();
+</script>
+<script src="/assets/script.js"></script>
+</body>
+</html>

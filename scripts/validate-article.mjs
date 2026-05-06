@@ -193,7 +193,7 @@ export async function validateArticleFile(mdPath, options = {}) {
   if (!faq || !/^##\s+Frequently asked/im.test(body)) errors.push('Missing "## Frequently asked" section');
 
   const wcMain = wordCount(main);
-  if (wcMain < 850 || wcMain > 1500) errors.push(`Main body word count ${wcMain} ((need 700–1500, excluding FAQ)`);
+  if (wcMain < 700 || wcMain > 1500) errors.push(`Main body word count ${wcMain} ((need 700–1500, excluding FAQ)`);
 
   const h2Main = countH2BeforeFaq(main);
   if (h2Main < 3 || h2Main > 5) errors.push(`H2 sections in main body: ${h2Main} (need 3–5)`);

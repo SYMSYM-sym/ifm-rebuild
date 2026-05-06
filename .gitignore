@@ -11,3 +11,8 @@ mobile-stage.html
 
 # Logs / temp
 *.log
+
+node_modules/
+
+# Embedding cache (regenerated in CI)
+content/articles/_embeddings.json

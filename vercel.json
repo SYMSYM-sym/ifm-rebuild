@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [{ "source": "/journal", "destination": "/blog" }],
   "headers": [
     {
       "source": "/assets/(.*)",

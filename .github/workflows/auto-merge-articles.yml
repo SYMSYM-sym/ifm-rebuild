@@ -1,0 +1,35 @@
+name: Auto-merge auto-articles
+
+on:
+  schedule:
+    - cron: '15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Auto-merge eligible PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          gh pr list --state open --label auto-article --json number,labels,createdAt,statusCheckRollup \
+            | node -e '
+              const prs = JSON.parse(require("fs").readFileSync(0, "utf8"));
+              const dayAgo = Date.now() - 24*60*60*1000;
+              for (const p of prs) {
+                const onHold = p.labels.some(l => l.name === "hold");
+                const old = new Date(p.createdAt).getTime() < dayAgo;
+                const checks = p.statusCheckRollup || [];
+                const failing = checks.some(c => c.conclusion === "FAILURE");
+                if (!onHold && old && !failing) console.log(p.number);
+              }
+            ' \
+            | xargs -r -I {} gh pr merge {} --squash --delete-branch

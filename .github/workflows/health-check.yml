@@ -1,0 +1,32 @@
+name: Weekly site health
+
+on:
+  schedule:
+    - cron: '37 15 * * 3'
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch live URLs
+        run: |
+          set -e
+          BASE=https://igorformen.com
+          curl -sfS "$BASE/" | grep -q 'application/ld+json'
+          curl -sfS "$BASE/sitemap.xml" | grep -q '<urlset'
+          curl -sfS "$BASE/llms.txt" | grep -q 'Igor For Men'
+          curl -sfS "$BASE/blog/" | grep -q 'Journal'
+          echo "Pick sample blog URLs from sitemap"
+          mapfile -t URLS < <(curl -sfS "$BASE/sitemap.xml" | sed -n 's|.*<loc>\(.*blog/[^<]*\)</loc>.*|\1|p' | head -n 20)
+          if [ "${#URLS[@]}" -lt 1 ]; then
+            echo "No blog URLs in sitemap yet — skipping article probes."
+            exit 0
+          fi
+          for u in "${URLS[@]:0:3}"; do
+            echo "Checking $u"
+            html="$(curl -sfS "$u")"
+            echo "$html" | grep -q 'application/ld+json'
+            echo "$html" | grep -q 'Article'
+          done
+          echo OK

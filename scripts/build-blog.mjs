@@ -166,7 +166,6 @@ async function renderArticlePage(article, all, partials) {
   const url = `${SITE}/blog/${slug}`;
   const canonical = `/blog/${slug}`;
   const reading = data.reading_time_minutes || Math.max(4, Math.round(mainMd.split(/\s+/).length / 200));
-  const reviewStamp = `Reviewed by Rene', ${data.date}`;
   const ogImage = `${SITE}/og.jpg`;
 
   const jsonLd = articleJsonLd(article, faqBlocks, url);
@@ -201,7 +200,6 @@ async function renderArticlePage(article, all, partials) {
     BUCKET_EYEBROW: bucketEyebrow,
     TITLE: escapeHtml(data.title),
     READING_TIME: String(reading),
-    REVIEW_STAMP: escapeHtml(reviewStamp),
     BODY_HTML: mainHtml,
     FAQ_HTML: faqHtml,
     RELATED_HTML: relatedHtml,

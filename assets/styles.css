@@ -1031,3 +1031,8 @@ a.js-tel:hover { color: var(--accent); }
 }
 .blog-empty-state p { margin: 0 0 12px; }
 .blog-empty-state strong { color: var(--accent); font-weight: 500; }
+
+/* Article: center the hero inner column to match body width */
+.article-hero__inner.container { max-width: 64ch; }
+.article-body { margin-left: auto; margin-right: auto; }
+.article-hero::after { margin-left: auto; margin-right: auto; }

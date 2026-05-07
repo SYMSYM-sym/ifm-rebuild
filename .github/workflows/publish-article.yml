@@ -2,8 +2,8 @@ name: Publish Article
 
 on:
   schedule:
-    - cron: '23 16 * * 1,4'
-    - cron: '23 17 * * 1,4'
+    - cron: '0 17 * * 1,4'
+    - cron: '0 18 * * 1,4'
   workflow_dispatch:
     inputs:
       slug:

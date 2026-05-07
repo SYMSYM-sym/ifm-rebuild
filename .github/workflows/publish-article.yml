@@ -1,9 +1,11 @@
 name: Publish Article
 
 on:
+  # Fires on Mon + Thu at 9:23 AM Pacific (off-peak minute to avoid GH cron congestion).
+  # Note: workflow file must be committed via verified commit for schedule to fire.
   schedule:
-    - cron: '53 17 * * *'
-    - cron: '23 19 * * 1,4'
+    - cron: '23 16 * * 1,4'
+    - cron: '23 17 * * 1,4'
   workflow_dispatch:
     inputs:
       slug:

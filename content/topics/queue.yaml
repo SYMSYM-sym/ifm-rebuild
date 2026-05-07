@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: male-brazilian-cost-los-angeles-2026
-  title: How Much Does a Male Brazilian Wax Cost in LA? (2026 Pricing Guide)
-  target_keyword: how much is a male brazilian wax in los angeles
-  secondary_keywords:
-    - male brazilian wax price la
-    - west hollywood brazilian cost
-  intent: MOF / commercial
-  bucket: pricing
-  internal_links:
-    - service: brazilian
-    - page: visit
-  notes: Anchor on transparency; link to services band; mention appointment-only model.
 - slug: mens-waxing-west-hollywood-guide
   title: "Men's Waxing in West Hollywood: Complete 2026 Guide"
   target_keyword: men's waxing west hollywood

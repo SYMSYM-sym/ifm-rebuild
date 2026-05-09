@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: mens-waxing-west-hollywood-guide
-  title: "Men's Waxing in West Hollywood: Complete 2026 Guide"
-  target_keyword: men's waxing west hollywood
-  secondary_keywords:
-    - private mens waxing weho
-    - male grooming west hollywood
-  intent: MOF / commercial
-  bucket: hyperlocal
-  internal_links:
-    - page: about
-    - page: visit
-  notes: Pillar page tone; weave Larrabee and Sunset Strip naturally.
 - slug: brazilian-vs-manzilian-difference
   title: "Brazilian vs Manzilian: What is the Difference?"
   target_keyword: brazilian wax vs manzilian

@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: brazilian-vs-manzilian-difference
-  title: "Brazilian vs Manzilian: What is the Difference?"
-  target_keyword: brazilian wax vs manzilian
-  secondary_keywords:
-    - what is a manzilian
-    - male brazilian vs manzilian
-  intent: TOF / informational
-  bucket: comparison
-  internal_links:
-    - service: brazilian
-    - page: faq
-  notes: Define terms plainly; no hype; discreet framing.
 - slug: aftercare-72-hours-male-brazilian
   title: "Aftercare Hour-by-Hour: 0–72 Hours After Your Brazilian"
   target_keyword: best aftercare for male brazilian wax

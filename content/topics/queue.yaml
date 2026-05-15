@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: aftercare-72-hours-male-brazilian
-  title: "Aftercare Hour-by-Hour: 0–72 Hours After Your Brazilian"
-  target_keyword: best aftercare for male brazilian wax
-  secondary_keywords:
-    - post brazilian wax care men
-    - what to do after male brazilian
-  intent: MOF / informational
-  bucket: aftercare
-  internal_links:
-    - page: aftercare
-    - service: brazilian
-  notes: Practical timeline; reinforce exfoliation without medical claims.
 - slug: rene-21-years-waxing-men-west-hollywood
   title: What 21+ Years of Waxing Men Has Taught Rene'
   target_keyword: top rated male waxer west hollywood

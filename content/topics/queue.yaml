@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: rene-21-years-waxing-men-west-hollywood
-  title: What 21+ Years of Waxing Men Has Taught Rene'
-  target_keyword: top rated male waxer west hollywood
-  secondary_keywords:
-    - experienced male waxer la
-    - private waxing practitioner weho
-  intent: BOF / commercial
-  bucket: eeat
-  internal_links:
-    - page: about
-    - page: visit
-  notes: Authority piece; Rene' quotes; discretion and consistency themes.
 - slug: sugaring-vs-waxing-men
   title: "Sugaring vs Waxing for Men: Which Hurts Less, Lasts Longer?"
   target_keyword: men's waxing vs sugaring

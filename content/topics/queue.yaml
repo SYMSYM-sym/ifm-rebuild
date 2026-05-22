@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: sugaring-vs-waxing-men
-  title: "Sugaring vs Waxing for Men: Which Hurts Less, Lasts Longer?"
-  target_keyword: men's waxing vs sugaring
-  secondary_keywords:
-    - hard wax vs sugar for male brazilian
-    - back wax vs sugaring men
-  intent: TOF / informational
-  bucket: comparison
-  internal_links:
-    - service: back
-    - page: faq
-  notes: Compare mechanics honestly; IFM uses wax — stay factual.
 - slug: back-waxing-west-hollywood-options
   title: "Back Waxing for Men in West Hollywood: Half, Full, or Shoulders?"
   target_keyword: back waxing west hollywood

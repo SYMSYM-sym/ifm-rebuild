@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: back-waxing-west-hollywood-options
-  title: "Back Waxing for Men in West Hollywood: Half, Full, or Shoulders?"
-  target_keyword: back waxing west hollywood
-  secondary_keywords:
-    - mens back wax la
-    - full back wax men weho
-  intent: BOF / transactional
-  bucket: service-detail
-  internal_links:
-    - service: back
-    - page: services
-  notes: Map options to booking intent; mention suite privacy.
 - slug: male-brazilian-wax-west-hollywood
   title: "Male Brazilian Wax in West Hollywood: What the Appointment Covers"
   target_keyword: male brazilian wax west hollywood

@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: chest-waxing-west-hollywood
-  title: "Chest Waxing for Men in West Hollywood: Coverage and Expectations"
-  target_keyword: chest waxing west hollywood
-  secondary_keywords:
-    - chest and abdomen waxing for men
-    - mens chest wax la
-  intent: BOF / transactional
-  bucket: hyperlocal
-  internal_links:
-    - service: chest
-    - page: services
-  notes: Athletes and models angle optional; stay grounded.
 - slug: male-brazilian-wax-beverly-hills
   title: Male Brazilian Wax for Beverly Hills Clients (Private WeHo Suite)
   target_keyword: male brazilian wax beverly hills

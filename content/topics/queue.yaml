@@ -1,18 +1,6 @@
 # Topic queue — editorial backlog (50 seeded). Remaining GAMEPLAN keywords: backfill in batches.
 # TODO: backfill keywords 51–100 from GAMEPLAN.md Appendix A into this file after launch.
 
-- slug: male-brazilian-wax-beverly-hills
-  title: Male Brazilian Wax for Beverly Hills Clients (Private WeHo Suite)
-  target_keyword: male brazilian wax beverly hills
-  secondary_keywords:
-    - brazilian wax men near beverly hills
-    - discreet mens waxing
-  intent: BOF / transactional
-  bucket: hyperlocal
-  internal_links:
-    - service: brazilian
-    - page: visit
-  notes: Drive time and discretion; Pacific Design Center landmark optional.
 - slug: does-male-brazilian-waxing-hurt
   title: Does Male Brazilian Waxing Hurt? A Straight Answer
   target_keyword: does male brazilian waxing hurt
